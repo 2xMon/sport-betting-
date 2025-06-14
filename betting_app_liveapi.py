@@ -1,10 +1,5 @@
-
-import streamlit as st
 import pandas as pd
-import numpy as np
-import requests
-from sklearn.ensemble import RandomForestRegressor
-from sklearn.model_selection import train_test_split
+import numpy from sklearn.model_selection import train_test_split
 
 st.title("🏀 NBA Betting Predictor (Live API Version)")
 
@@ -103,6 +98,3 @@ st.subheader("📈 Model Predictions")
 st.write(f"**Predicted Margin:** {pred_margin:.2f}")
 st.write(f"**Predicted Total Points:** {pred_total:.2f}")
 
-st.subheader("💰 Betting Recommendations")
-st.write(f"**Spread Edge:** {spread_edge:.2f} | Bet: {'✅ Yes' if abs(spread_edge) >= 3 else '❌ No'} | Kelly %: {kelly_spread*100:.2f}%")
-st.write(f"**Total Edge:** {total_edge:.2f} | Bet: {'✅ Yes' if abs(total_edge) >= 3 else '❌ No'} | Kelly %: {kelly_total*100:.2f}%")
